@@ -17,7 +17,7 @@ let arrayCount = 1024
 
 // This test case exposes rdar://17440222 which caused rdar://17974483 (popFront
 // being really slow).
-
+/*
 func _arrayReplace<B: _ArrayBufferProtocol, C: Collection
   where C.Iterator.Element == B.Element, B.Index == Int
   >(
@@ -43,10 +43,11 @@ func _arrayReplace<B: _ArrayBufferProtocol, C: Collection
     _preconditionFailure("Should not get here?")
   }
 }
-
+*/
 
 @inline(never)
 public func run_PopFrontArrayGeneric(_ N: Int) {
+/*
   let orig = Array(repeating: 1, count: arrayCount)
   var a = [Int]()
   for _ in 1...20*N {
@@ -60,4 +61,5 @@ public func run_PopFrontArrayGeneric(_ N: Int) {
       CheckResults(result == arrayCount, "IncorrectResults in StringInterpolation: \(result) != \(arrayCount)")
     }
   }
+*/
 }
